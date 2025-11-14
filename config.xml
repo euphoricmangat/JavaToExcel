@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <workbook>
+        <file>post_trade_profitability_report.xlsx</file>
+    </workbook>
+    <sheets>
+        <sheet>
+            <name>YTD Performance - Master</name>
+            <title>YTD Performance as of 03-Oct-2025</title>
+            <input>
+                <file>data_master.csv</file>
+                <separator>,</separator>
+                <hasHeader>true</hasHeader>
+            </input>
+            <totalsHeader>
+                <label>Totals</label>
+                <startIndex>6</startIndex>
+                <endIndex>8</endIndex>
+                <backgroundColor>#0B4F8A</backgroundColor>
+                <fontColor>#FFFFFF</fontColor>
+            </totalsHeader>
+            <headerFormat>
+                <bold>true</bold>
+                <backgroundColor>#203864</backgroundColor>
+                <fontColor>#FFFFFF</fontColor>
+                <fontSize>11</fontSize>
+            </headerFormat>
+            <columns>
+                <!-- Trade detail columns identical to previous configuration -->
+                <column><index>0</index><name>Trade ID</name><dataType>TEXT</dataType><format><bold>true</bold><backgroundColor>#D9E1F2</backgroundColor><fontColor>#000000</fontColor><width>12</width><alignment>CENTER</alignment></format></column>
+                <column><index>1</index><name>Trade Date</name><dataType>DATE</dataType><format><dateFormat>yyyy-MM-dd</dateFormat><width>12</width><alignment>CENTER</alignment></format></column>
+                <column><index>2</index><name>Instrument</name><dataType>TEXT</dataType><format><width>20</width><alignment>LEFT</alignment></format></column>
+                <column><index>3</index><name>Side</name><dataType>TEXT</dataType><format><bold>true</bold><width>8</width><alignment>CENTER</alignment></format></column>
+                <column><index>4</index><name>Quantity</name><dataType>NUMBER</dataType><format><numberFormat>#,##0</numberFormat><width>12</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>5</index><name>Price</name><dataType>NUMBER</dataType><format><numberFormat>#,##0.00</numberFormat><width>12</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>6</index><name>Trade Value</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0.00</numberFormat><width>15</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>7</index><name>Commission</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0.00</numberFormat><width>12</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>8</index><name>Net P&amp;L</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0.00</numberFormat><bold>true</bold><width>15</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>9</index><name>Currency</name><dataType>TEXT</dataType><format><width>10</width><alignment>CENTER</alignment></format></column>
+                <column><index>10</index><name>Trader</name><dataType>TEXT</dataType><format><width>15</width><alignment>LEFT</alignment></format></column>
+                <column><index>11</index><name>Settlement Date</name><dataType>DATE</dataType><format><dateFormat>yyyy-MM-dd</dateFormat><width>15</width><alignment>CENTER</alignment></format></column>
+            </columns>
+        </sheet>
+        <sheet>
+            <name>YTD Performance - CRM</name>
+            <title>Client Segment Performance</title>
+            <input>
+                <file>data_crm.csv</file>
+                <separator>,</separator>
+                <hasHeader>true</hasHeader>
+            </input>
+            <headerFormat>
+                <bold>true</bold>
+                <backgroundColor>#1F4E79</backgroundColor>
+                <fontColor>#FFFFFF</fontColor>
+                <fontSize>11</fontSize>
+            </headerFormat>
+            <columns>
+                <column><index>0</index><name>Region</name><dataType>TEXT</dataType><format><width>14</width><alignment>LEFT</alignment></format></column>
+                <column><index>1</index><name>Client Segment</name><dataType>TEXT</dataType><format><width>18</width><alignment>LEFT</alignment></format></column>
+                <column><index>2</index><name>Account Tier</name><dataType>TEXT</dataType><format><width>12</width><alignment>CENTER</alignment></format></column>
+                <column><index>3</index><name>Sales Trader</name><dataType>TEXT</dataType><format><width>16</width><alignment>LEFT</alignment></format></column>
+                <column><index>4</index><name>Revenue USD</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0</numberFormat><width>16</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>5</index><name>Pipeline USD</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0</numberFormat><width>18</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+            </columns>
+        </sheet>
+        <sheet>
+            <name>YTD Performance - Coverage</name>
+            <title>Coverage &amp; Sub Category Mix</title>
+            <input>
+                <file>data_coverage.csv</file>
+                <separator>,</separator>
+                <hasHeader>true</hasHeader>
+            </input>
+            <headerFormat>
+                <bold>true</bold>
+                <backgroundColor>#1C5D99</backgroundColor>
+                <fontColor>#FFFFFF</fontColor>
+                <fontSize>11</fontSize>
+            </headerFormat>
+            <columns>
+                <column><index>0</index><name>Coverage Cluster</name><dataType>TEXT</dataType><format><width>18</width><alignment>LEFT</alignment></format></column>
+                <column><index>1</index><name>Business Stream</name><dataType>TEXT</dataType><format><width>12</width><alignment>CENTER</alignment></format></column>
+                <column><index>2</index><name>Desk Owner</name><dataType>TEXT</dataType><format><width>16</width><alignment>LEFT</alignment></format></column>
+                <column><index>3</index><name>Active Clients</name><dataType>NUMBER</dataType><format><numberFormat>#,##0</numberFormat><width>12</width><alignment>CENTER</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>4</index><name>Sales Comm USD</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0</numberFormat><width>18</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>5</index><name>Execution Cost USD</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0</numberFormat><width>18</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+            </columns>
+        </sheet>
+        <sheet>
+            <name>MTD Product Mix</name>
+            <title>Month-to-Date Product Profitability</title>
+            <input>
+                <file>data_monthly.csv</file>
+                <separator>,</separator>
+                <hasHeader>true</hasHeader>
+            </input>
+            <headerFormat>
+                <bold>true</bold>
+                <backgroundColor>#244062</backgroundColor>
+                <fontColor>#FFFFFF</fontColor>
+                <fontSize>11</fontSize>
+            </headerFormat>
+            <columns>
+                <column><index>0</index><name>Month</name><dataType>TEXT</dataType><format><width>12</width><alignment>LEFT</alignment></format></column>
+                <column><index>1</index><name>Product</name><dataType>TEXT</dataType><format><width>22</width><alignment>LEFT</alignment></format></column>
+                <column><index>2</index><name>Side</name><dataType>TEXT</dataType><format><width>8</width><alignment>CENTER</alignment></format></column>
+                <column><index>3</index><name>Quantity</name><dataType>NUMBER</dataType><format><numberFormat>#,##0</numberFormat><width>12</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>4</index><name>Notional USD</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0</numberFormat><width>18</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>5</index><name>Commission USD</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0</numberFormat><width>16</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+                <column><index>6</index><name>Net P&amp;L USD</name><dataType>CURRENCY</dataType><format><numberFormat>$#,##0</numberFormat><width>16</width><alignment>RIGHT</alignment><includeTotals>true</includeTotals></format></column>
+            </columns>
+        </sheet>
+    </sheets>
+</configuration>

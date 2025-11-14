@@ -1,0 +1,36 @@
+{
+	"name": "SXBank Java Maven Project",
+	"image": "maven:3.9-eclipse-temurin-17",
+	
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "17",
+			"jdkDistro": "ms"
+		}
+	},
+
+	"workspaceFolder": "/workspace",
+	
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-maven",
+				"redhat.java"
+			],
+			"settings": {
+				"java.configuration.updateBuildConfiguration": "automatic",
+				"java.compile.nullAnalysis.mode": "automatic"
+			}
+		}
+	},
+
+	"remoteUser": "root",
+	
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/workspace,type=bind"
+	],
+
+	"postCreateCommand": "mvn --version && java -version"
+}
+
