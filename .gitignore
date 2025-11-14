@@ -1,0 +1,21 @@
+# Maven
+target/
+dependency-reduced-pom.xml
+*.jar
+!target/*.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated Excel files (optional - remove if you want to track them)
+*.xlsx
+
